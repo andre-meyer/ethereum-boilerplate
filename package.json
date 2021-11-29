@@ -5,7 +5,9 @@
   "dependencies": {
     "@emotion/react": "^11.7.0",
     "@emotion/styled": "^11.6.0",
+    "@mui/lab": "^5.0.0-alpha.57",
     "@mui/material": "^5.2.1",
+    "core-js": "^3.19.1",
     "cross-env": "^7.0.3",
     "ethers": "^5.5.1",
     "html-webpack-plugin": "^5.5.0",

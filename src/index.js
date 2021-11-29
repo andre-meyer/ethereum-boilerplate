@@ -1,3 +1,6 @@
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+
 import React from "react";
 import CssBaseline from '@mui/material/CssBaseline';
 
