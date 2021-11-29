@@ -18,11 +18,18 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.json$/,
+        type: "asset/source"
       }
     ]
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
+    alias: {
+      "assets": path.resolve('./assets'),
+    },
   },
   devServer: {
     port: 8080,

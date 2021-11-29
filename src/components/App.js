@@ -2,7 +2,9 @@ import React from "react";
 import ChangeOwner from "./ChangeOwner";
 import CurrentNumber from "./CurrentNumber";
 import CurrentOwner from "./CurrentOwner";
-import IncreaseNumber from "./IncreaseNumber";
+import IncrementNumber from "./IncrementNumber";
+import OnlyForOwner from "./OnlyForOwner";
+import ResetNumber from "./ResetNumber";
 
 const App = () => {
   return (
@@ -10,9 +12,12 @@ const App = () => {
       <h1>Workshop: Smart Contract Frontend</h1>
       <div>
         <CurrentNumber />
-        <IncreaseNumber />
+        <IncrementNumber />
         <CurrentOwner />
-        <ChangeOwner />
+        <OnlyForOwner>
+          <ChangeOwner />
+          <ResetNumber />
+        </OnlyForOwner>
       </div>
     </div>
   )

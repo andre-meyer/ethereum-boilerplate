@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Container, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import changeOwner from "../api/changeOwner";
+import {changeOwner} from "../api";
 import { LoadingButton } from "@mui/lab";
 
 const ChangeOwner = () => {
