@@ -11,27 +11,43 @@ export const getAccount = async () => {
 
   await window.ethereum.enable();
 
-  throw new Error("not implemented");
+  const address = await signer.getAddress();
+  return address;
 }
 
 /* Transactions */
 export const changeOwner = async (newOwner) => {
-  throw new Error("not implemented");
+  const instance = await MyContract.deployed();
+  const instanceWithSigner = instance.connect(signer);
+  
+  await instanceWithSigner.changeOwner(newOwner);
 }
 
 export const incrementNumber = async () => {
-  throw new Error("not implemented");
+  const instance = await MyContract.deployed();
+  const instanceWithSigner = instance.connect(signer);
+  
+  await instanceWithSigner.increment();
 }
 
 export const resetNumber = async () => {
-  throw new Error("not implemented");
+  const instance = await MyContract.deployed();
+  const instanceWithSigner = instance.connect(signer);
+  
+  await instanceWithSigner.reset();
 }
 
 /* View Functions */
 export const getOwner = async () => {
-  throw new Error("not implemented");
+  const instance = await MyContract.deployed();
+
+  const owner = await instance.getOwner();
+  return owner;
 }
 
 export const getNumber = async () => {
-  throw new Error("not implemented");
+  const instance = await MyContract.deployed();
+
+  const owner = await instance.getNumber();
+  return owner.toString();
 }
